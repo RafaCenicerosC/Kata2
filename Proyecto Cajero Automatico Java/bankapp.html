@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Bank App</title>
 </head>
 <body>
-   <h1>HOLA MUNDO</h1> 
+	<header>
+		<i class="fa-solid fa-piggy-bank fa-bounce fa-lg"></i>
+		<h1>Bank App</h1>
+		<label>
+			<i class="fa-solid fa-user"></i>
+			<i class="fa-solid fa-angle-down"></i>
+		</label>
+	</header>
+	<div class="container">
+		<div class="subcontainer">
+			<div id="Inicio" class="bloque activo">
+				<h2> Bienvenido</h2>
+			</div>
+			<div id="Balance"class="bloque">
+				<h2> Saldo actual:</h2>
+			</div>
+			<div id="Depositar"class="bloque">
+				<h2> Deposito</h2>
+			</div>
+			<div id="Retirar"class="bloque">
+				<h2> Retiro</h2>
+			</div>
+		</div>
+		<ul class="ul menu">
+			<li class="li activo"><i class="fa-solid fa-house fa-2xl"></i><label>Inicio</label></li>
+			<li class="li"><i class="fa-sharp fa-solid fa-building-columns fa-2xl"></i><label>Balance</label></li>
+			<li class="li"><i class="fa-solid fa-square-plus fa-2xl"></i><label>Depositar</label></li>
+			<li class="li"><i class="fa-solid fa-circle-minus fa-2xl"></i><label>Retirar</label></li>
+		</ul>
+		
+	</div>
+	<!-- <div class="menu">
+		<label><i class="fa-solid fa-house fa-2xl"></i> Inicio </label>
+		<label><i class="fa-sharp fa-solid fa-building-columns fa-2xl"></i> Balance</label>
+		<label><i class="fa-solid fa-square-plus fa-2xl"></i> Depositar</label>
+		<label><i class="fa-solid fa-circle-minus fa-2xl"></i> Retirar</label>
+	</div>	 -->
+	<script src="script2.js"></script>
 </body>
+
 </html>

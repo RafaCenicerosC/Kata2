@@ -2,6 +2,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const button = document.getElementById('button');
 const alertDiv = document.getElementById('alert');
+// const userDiv = document.getElementById('user');
 
 const users = [
   { username: 'user1', password: 'pass1' },
@@ -22,9 +23,13 @@ button.addEventListener('click', (e) => {
   if (user) {
     // Redirect to new page
     window.location.href = "bankapp.html";
+    userDiv.innerHTML = username;
+    userDiv.classList.add('user');
   } else {
     // Show alert
     alertDiv.innerHTML = 'Username or password is incorrect.';
     alertDiv.classList.add('alert');
   }
 });
+
+

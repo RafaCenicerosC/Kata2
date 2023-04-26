@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #2bc57d, #25e78d);
+}
+
+header {
+  align-items: center;
+  color: white;
+  background: linear-gradient(to right, #2bc57d, #25e78d);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 30px;
+  box-shadow: 0 5px 10px rgba(5, 117, 61, 0.2);
+}
+
+header label {
+  padding: 10px 5px;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header label:hover {
+  background-color: white;
+  padding: 10px 5px;
+  border-radius: 2em;
+  cursor: pointer;
+  color: #25e78d;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  background-color: #4DE7A1;
+  /* padding: 20px 25px; */
+  /* max-width: 150em; */
+  /* width:90%; */
+  justify-content: center;
+  /* margin: 1em 3em; */
+  align-items: center;
+  /*flex-end para final*/
+
+}
+
+.container .ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.1em;
+
+}
+
+.container .li {
+  padding: 15px 8px;
+  border-radius: 2em;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
+  display: inline-block;
+  border-radius: 2em;
+}
+
+.container .li:hover {
+  border-radius: 2em;
+  padding: 15px 8px;
+  color: #027541;
+  box-shadow: 0 5px 10px rgba(5, 117, 61, 0.3);
+  background-color: white;
+  cursor: pointer;
+}
+
+.container .li.activo {
+  /* background-color: white; */
+  padding: 15px 8px;
+  cursor: pointer;
+  color: #027541;
+
+  /* box-shadow: 0 5px 10px rgba(5, 117, 61, 0.3); */
+}
+
+.container .subcontainer {
+  width: 100%;
+  padding: 1em;
+}
+
+.container .bloque {
+  display: none;
+  /* background-color: lightseagreen; */
+  padding: 1em;
+  transition: all .5s ease;
+}
+
+.bloque.activo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 75vh;
+}
+
+.menu {
+  display: flex;
+  background: linear-gradient(to right, #2bc57d, #25e78d);
+  min-height: 5vh;
+  box-shadow: 0 5px 10px rgba(5, 117, 61, 0.7);
+  color: white;
+}
+
+.li label {
+  margin-left: 1em;
+  cursor: pointer;
+}
