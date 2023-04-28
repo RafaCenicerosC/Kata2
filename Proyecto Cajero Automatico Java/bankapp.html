@@ -27,10 +27,76 @@
 				<h2> Saldo actual:</h2>
 			</div>
 			<div id="Depositar"class="bloque">
-				<h2> Deposito</h2>
+				<div class="digitinput">
+					<input type="text" id="display" readonly>
+					<div class="keypad">
+						<div class="row">
+							<button class="digit" onclick="appendNumber(1)">1</button>
+							<button class="digit"onclick="appendNumber(2)">2</button>
+							<button class="digit"onclick="appendNumber(3)">3</button>
+						</div>
+						<div class="row">
+						<button class="digit"onclick="appendNumber(4)">4</button>
+						<button class="digit"onclick="appendNumber(5)">5</button>
+						<button class="digit"onclick="appendNumber(6)">6</button>
+						</div>
+						
+						<div class="row">
+						<button class="digit"onclick="appendNumber(7)">7</button>
+						<button class="digit"onclick="appendNumber(8)">8</button>
+						<button class="digit"onclick="appendNumber(9)">9</button>
+						</div>
+						<div class="row">
+							<button class="reset" onclick="clearDisplay()"><i class="fa-solid fa-ban"></i></button>
+						<button class="digit"onclick="appendNumber(0)">0</button>
+						<button class="delete" onclick="deleteLastDigit()"><i class="fa-solid fa-delete-left"></i></button>
+						</div>
+						<div class="row">
+						<button id=DepositButton class="deposit" onclick="deposit()">Depositar</button>
+						</div>
+					</div>
+					<dialog id="DepositWindow">
+						<i id="CloseButton" class="fa-solid fa-circle-xmark fa-xl"></i>
+						<h2>Dinero Depositado</h2>
+						<i class="fa-solid fa-check fa-bounce fa-xl"></i>
+					</dialog>
+				</div>
 			</div>
 			<div id="Retirar"class="bloque">
-				<h2> Retiro</h2>
+				<div class="digitinput">
+					<input type="text" id="display2" readonly>
+					<div class="keypad">
+						<div class="row">
+							<button class="digit" onclick="appendNumber(1)">1</button>
+							<button class="digit"onclick="appendNumber(2)">2</button>
+							<button class="digit"onclick="appendNumber(3)">3</button>
+						</div>
+						<div class="row">
+						<button class="digit"onclick="appendNumber(4)">4</button>
+						<button class="digit"onclick="appendNumber(5)">5</button>
+						<button class="digit"onclick="appendNumber(6)">6</button>
+						</div>
+						
+						<div class="row">
+						<button class="digit"onclick="appendNumber(7)">7</button>
+						<button class="digit"onclick="appendNumber(8)">8</button>
+						<button class="digit"onclick="appendNumber(9)">9</button>
+						</div>
+						<div class="row">
+							<button class="reset" onclick="clearDisplay()"><i class="fa-solid fa-ban"></i></button>
+						<button class="digit"onclick="appendNumber(0)">0</button>
+						<button class="delete" onclick="deleteLastDigit()"><i class="fa-solid fa-delete-left"></i></button>
+						</div>
+						<div class="row">
+						<button id=WithdrawButton class="deposit" onclick="deposit()">Retirar</button>
+						</div>
+					</div>
+					<dialog id="WithdrawWindow">
+						<i id="CloseButton2" class="fa-solid fa-circle-xmark fa-xl"></i>
+						<h2>Retiro Exitoso</h2>
+						<i class="fa-solid fa-check fa-bounce fa-xl"></i>
+					</dialog>
+				</div>
 			</div>
 		</div>
 		<ul class="ul menu">
@@ -41,12 +107,6 @@
 		</ul>
 		
 	</div>
-	<!-- <div class="menu">
-		<label><i class="fa-solid fa-house fa-2xl"></i> Inicio </label>
-		<label><i class="fa-sharp fa-solid fa-building-columns fa-2xl"></i> Balance</label>
-		<label><i class="fa-solid fa-square-plus fa-2xl"></i> Depositar</label>
-		<label><i class="fa-solid fa-circle-minus fa-2xl"></i> Retirar</label>
-	</div>	 -->
 	<script src="script2.js"></script>
 </body>
 

@@ -83,23 +83,24 @@ header label:hover {
 }
 
 .container .li.activo {
-  /* background-color: white; */
-  padding: 15px 8px;
+  background-color: white;
+  padding: 15px 50px;
   cursor: pointer;
   color: #027541;
-
-  /* box-shadow: 0 5px 10px rgba(5, 117, 61, 0.3); */
+  /* border-radius: 5px; */
+  box-shadow: 0 5px 10px rgba(5, 117, 61, 0.3); 
+  margin: 0;
 }
 
 .container .subcontainer {
   width: 100%;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .container .bloque {
   display: none;
   /* background-color: lightseagreen; */
-  padding: 1em;
+  /* padding: 0.5em; */
   transition: all .5s ease;
 }
 
@@ -108,7 +109,7 @@ header label:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 75vh;
+  /* min-height: 75vh; */
 }
 
 .menu {
@@ -122,4 +123,233 @@ header label:hover {
 .li label {
   margin-left: 1em;
   cursor: pointer;
+}
+
+/* Estilos para el contenedor principal */
+.digitinput{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.432);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la pantalla de la calculadora */
+#display, #display2{
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  font-size: 36px;
+  text-align: right;
+  background-color: rgb(232, 246, 248);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  border:none
+}
+
+/* Estilos para los botones */
+.keypad button {
+  width: 20%;
+  height: 2em;
+  font-size: 24px;
+  background-color: #e0e0e0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilos para los botones de borrado */
+.keypad button.delete {
+  background-color: lightgoldenrodyellow;
+  /* color: #fff; */
+}
+
+/* Estilos para los botones de reset */
+.keypad button.reset {
+  background-color: #df8b8b;
+  color: #000;
+}
+
+.keypad button.deposit {
+  background-color: lightgreen;
+  color: #000;
+  width: 5em;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 0;
+}
+
+/* Estilos para los botones al pasar el mouse */
+.keypad button.digit:hover {
+  background-color: rgb(213, 245, 213);
+  transform: scale(1.05);
+}
+.keypad button:hover {
+  transform: scale(1.05);
+}
+
+.digitinput dialog{
+    background:white;
+    border:none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: large;
+    border-radius: 1em;
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    left:0;
+    margin: auto;
+}
+
+.digitinput dialog .fa-circle-xmark{
+    display: flex;
+    color:red;
+    justify-content: flex-end;
+    padding: 0;
+    cursor:pointer;
+    margin-top: 5px;
+}
+.digitinput dialog h2{
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.digitinput dialog .fa-check{
+    display: flex;
+    color:lightgreen;
+    justify-content: center;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  header {
+    margin: 0;
+    padding: 50px 50px;
+    box-shadow: 0 5px 10px rgba(5, 117, 61, 0.2);
+    font-size: 36px;
+  }
+
+  .menu{
+    height:150px;
+    font-size: 30px;
+  }
+  .menu label{
+    display: none;
+  }
+  
+.bloque.activo {
+  min-height: 82vh;
+ }
+ .digitinput{
+  padding: 50px 50px;
+}
+.keypad button {
+  width: 3em;
+  height: 3em;
+  font-size: 60px;
+  margin: 40px;
+
+}
+#display, #display2 {
+  height: 150px;
+  font-size: 60px;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  header{
+    /* color: red; */
+    margin: 0;
+    padding: 10px 50px;
+    box-shadow: 0 5px 10px rgba(5, 117, 61, 0.2);
+    font-size: 18px;
+  }
+  .bloque.activo {
+    min-height: 75vh;
+   }
+   .digitinput{
+    padding: 10px 10px;
+    margin: 0;
+  }
+  .keypad button {
+    width: 5em;
+    height: 4em;
+    font-size: 12px;
+    margin: 10px;
+  
+  }
+  #display, #display2 {
+    height: 4em;
+    font-size: 12px;
+  }
+
+.menu{
+  height:50px;
+  font-size: 12px;
+}
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+  header{
+    /* color:green; */
+    margin: 0;
+    padding: 10px 50px;
+    box-shadow: 0 5px 10px rgba(5, 117, 61, 0.2);
+    font-size: 18px;
+  }
+  .bloque.activo {
+    min-height: 78vh;
+   }
+   .digitinput{
+    /* padding: 50px 50px; */
+    margin: 0;
+    border-radius: 4px;
+  }
+  .keypad button {
+    width: 5em;
+    height: 4em;
+    font-size: 14px;
+    /* margin: 10px; */
+  
+  }
+  #display, #display2 {
+    height: 4em;
+    font-size: 14px;
+  }
+
+.menu{
+  margin-top: 20px;
+  height:50px;
+  font-size: 12px;
+}
 }
