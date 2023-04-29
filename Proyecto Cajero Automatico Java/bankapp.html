@@ -21,7 +21,59 @@
 	<div class="container">
 		<div class="subcontainer">
 			<div id="Inicio" class="bloque activo">
-				<h2> Bienvenido</h2>
+				<div class="inicio">
+					<!-- Tarjeta -->
+					<section class="bienvenida">
+						<div class="column">
+							<h2>¡Hola!</h2>
+							<h3>Bienvenido</h3>
+							<h4>@Usuario</h4>
+						</div>
+
+					</section>
+					<section class="tarjeta" id="tarjeta">
+						<div class="delantera">
+							<div class="row" id="row1">
+								<label>BankApp</label>
+								<div class="logo-marca" id="logo-marca">
+									<img src="MASTERCARDLOGO.png" alt="">
+								</div>
+							</div>
+							<div class="row" id="row2">
+								<img src="CHIPTARJETA.png" class="chip" alt="">
+							</div>
+							<div class="row" id="row3">
+								<div class="cardnumber">
+									<p class="label">Número Tarjeta</p>
+									<p class="numero" id="numero">#### #### #### ####</p>
+								</div>
+							</div>
+							<div class="row" id="row4">
+								<div class="cardholder">
+									<p class="label">Nombre Tarjeta</p>
+									<p class="nombre" id="nombre">Nombre apellido</p>
+								</div>
+								<div class="exp">
+									<p class="label">Expiracion</p>
+									<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+								</div>
+							</div>
+			
+						</div>
+			
+						<div class="trasera">
+							<div class="barra-magnetica"></div>
+							<div class="SecurityCode">
+								<p class="label">CCV</p>
+								<p class="ccv" id="ccv">***</p>
+							</div>
+						</div>
+					</section>
+					<section class="instrucciones">
+						<h5>Haz clic en la tarjeta para visualizar</h5> 
+						<i class="fa-solid fa-hand-pointer fa-bounce"></i>
+					</section>
+				</div>
 			</div>
 			<div id="Balance"class="bloque">
 				<h2> Saldo actual:</h2>
