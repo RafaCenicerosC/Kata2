@@ -109,7 +109,7 @@ header label:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* min-height: 75vh; */
+  min-height: 75vh;
 }
 
 .menu {
@@ -186,7 +186,7 @@ header label:hover {
   color: #000;
 }
 
-.keypad button.deposit {
+.keypad button.actionbutton {
   background-color: lightgreen;
   color: #000;
   width: 5em;
@@ -238,13 +238,25 @@ header label:hover {
     padding-bottom: 1em;
 }
 
-.digitinput dialog .fa-check{
-    display: flex;
-    color:lightgreen;
-    justify-content: center;
-    padding: 0;
-    margin-top: 1em;
-    margin-bottom: 1em;
+#no-error,#error,#no-error2,#error2{
+    display: none;
+}
+
+#no-error.active,#no-error2.active{
+  display: flex;
+  color:lightgreen;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#error.active,#error2.active{
+  display: flex;
+  color:red;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .inicio {
@@ -312,7 +324,7 @@ header label:hover {
   margin: 2em;
   padding: 1em;
   color: #fff;
-  font-size: 24px;
+  font-size: 42px;
   border-radius: 32px;
 }
 
@@ -506,11 +518,7 @@ font-size: 1.5em;
     padding: 10px 50px;
     box-shadow: 0 5px 10px rgba(5, 117, 61, 0.2);
     font-size: 18px;
-  }
-  #Inicio{
-    flex-direction: row;
-  }
- 
+  } 
    .digitinput{
     padding: 10px 10px;
     margin: 0;
@@ -535,13 +543,13 @@ font-size: 1.5em;
   /* background-color: lightskyblue; */
 	/* padding: 10px; */
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
 .inicio .bienvenida{
   /* background-color: darkgreen; */
-  padding: 0 1em;
+  padding: 0;
   font-size:40px;
   
 }
@@ -549,13 +557,20 @@ font-size: 1.5em;
 .inicio .instrucciones{
   background-color: rgba(213, 216, 209, 0.253);
   /* flex-direction: column; */
-  margin: 0;
+  margin: 0 0;
+  /* padding: 2em 5em; */
   font-size: 18px;
   text-align: center;
 }
+
+.inicio .instrucciones h5{
+/* background-color: black; */
+width: 150px;
+}
 .tarjeta {
 	max-width: 1200px;
-  margin:0;
+  min-width: 400px;
+  margin:0 2em;
 }
 .tarjeta .row{
   margin: 5px;
@@ -644,7 +659,7 @@ font-size: 1em;
   /* background-color: lightskyblue; */
 	/* padding: 10px; */
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -658,13 +673,20 @@ font-size: 1em;
 .inicio .instrucciones{
   background-color: rgba(213, 216, 209, 0.253);
   /* flex-direction: column; */
-  margin: 0;
+  margin: 0 2em;
+  /* padding: 2em 5em; */
   font-size: 18px;
   text-align: center;
 }
+
+.inicio .instrucciones h5{
+/* background-color: black; */
+width: 150px;
+}
 .tarjeta {
 	max-width: 1200px;
-  margin:0;
+  min-width: 500px;
+  margin:0 2em;
 }
 .tarjeta .row{
   margin: 5px;

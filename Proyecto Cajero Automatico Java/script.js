@@ -2,7 +2,6 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const button = document.getElementById('button');
 const alertDiv = document.getElementById('alert');
-// const userDiv = document.getElementById('user');
 
 const users = [
   { username: 'user1', password: 'pass1' },
@@ -22,9 +21,20 @@ button.addEventListener('click', (e) => {
 
   if (user) {
     // Redirect to new page
-    window.location.href = "bankapp.html";
-    userDiv.innerHTML = username;
-    userDiv.classList.add('user');
+    if(username.value == "user1"){
+      document.cookie = "usuario=user1";
+      window.location.href = "bankapp.html";
+    }
+    else if(username.value == "user2"){
+      document.cookie = "usuario=user2";
+      window.location.href = "bankapp.html";
+    }
+    else if(username.value == "user3"){
+      document.cookie = "usuario=user3";
+      window.location.href = "bankapp.html";
+    }
+    
+    
   } else {
     // Show alert
     alertDiv.innerHTML = 'Username or password is incorrect.';

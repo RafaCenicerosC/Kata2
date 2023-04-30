@@ -27,7 +27,7 @@
 						<div class="column">
 							<h2>¡Hola!</h2>
 							<h3>Bienvenido</h3>
-							<h4>@Usuario</h4>
+							<h4 id="nombreusuario">@Usuario</h4>
 						</div>
 
 					</section>
@@ -55,7 +55,7 @@
 								</div>
 								<div class="exp">
 									<p class="label">Expiracion</p>
-									<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+									<p class="expiracion"><span class="mes" id="expmonth">MM</span> / <span class="year" id="expyear">AA</span></p>
 								</div>
 							</div>
 			
@@ -104,13 +104,14 @@
 						<button class="delete" onclick="deleteLastDigit()"><i class="fa-solid fa-delete-left"></i></button>
 						</div>
 						<div class="row">
-						<button id=DepositButton class="deposit" onclick="deposit()">Depositar</button>
+						<button id=DepositButton class="actionbutton" onclick="deposit()">Depositar</button>
 						</div>
 					</div>
-					<dialog id="DepositWindow">
+					<dialog id="MessageWindow">
 						<i id="CloseButton" class="fa-solid fa-circle-xmark fa-xl"></i>
-						<h2>Dinero Depositado</h2>
-						<i class="fa-solid fa-check fa-bounce fa-xl"></i>
+						<h2 id=mensajeDeposito></h2>
+						<i id="no-error" class="fa-solid fa-check fa-bounce fa-xl"></i>
+						<i id="error" class="fa-solid fa-exclamation fa-bounce fa-xl"></i>
 					</dialog>
 				</div>
 			</div>
@@ -119,34 +120,35 @@
 					<input type="text" id="display2" readonly>
 					<div class="keypad">
 						<div class="row">
-							<button class="digit" onclick="appendNumber(1)">1</button>
-							<button class="digit"onclick="appendNumber(2)">2</button>
-							<button class="digit"onclick="appendNumber(3)">3</button>
+							<button class="digit" onclick="appendNumberW(1)">1</button>
+							<button class="digit"onclick="appendNumberW(2)">2</button>
+							<button class="digit"onclick="appendNumberW(3)">3</button>
 						</div>
 						<div class="row">
-						<button class="digit"onclick="appendNumber(4)">4</button>
-						<button class="digit"onclick="appendNumber(5)">5</button>
-						<button class="digit"onclick="appendNumber(6)">6</button>
+						<button class="digit"onclick="appendNumberW(4)">4</button>
+						<button class="digit"onclick="appendNumberW(5)">5</button>
+						<button class="digit"onclick="appendNumberW(6)">6</button>
 						</div>
 						
 						<div class="row">
-						<button class="digit"onclick="appendNumber(7)">7</button>
-						<button class="digit"onclick="appendNumber(8)">8</button>
-						<button class="digit"onclick="appendNumber(9)">9</button>
+						<button class="digit"onclick="appendNumberW(7)">7</button>
+						<button class="digit"onclick="appendNumberW(8)">8</button>
+						<button class="digit"onclick="appendNumberW(9)">9</button>
 						</div>
 						<div class="row">
-							<button class="reset" onclick="clearDisplay()"><i class="fa-solid fa-ban"></i></button>
-						<button class="digit"onclick="appendNumber(0)">0</button>
-						<button class="delete" onclick="deleteLastDigit()"><i class="fa-solid fa-delete-left"></i></button>
+							<button class="reset" onclick="clearDisplayW()"><i class="fa-solid fa-ban"></i></button>
+						<button class="digit"onclick="appendNumberW(0)">0</button>
+						<button class="delete" onclick="deleteLastDigitW()"><i class="fa-solid fa-delete-left"></i></button>
 						</div>
 						<div class="row">
-						<button id=WithdrawButton class="deposit" onclick="deposit()">Retirar</button>
+						<button id=WithdrawButton class="actionbutton" onclick="withdraw()">Retirar</button>
 						</div>
 					</div>
-					<dialog id="WithdrawWindow">
+					<dialog id="MessageWindow2">
 						<i id="CloseButton2" class="fa-solid fa-circle-xmark fa-xl"></i>
-						<h2>Retiro Exitoso</h2>
-						<i class="fa-solid fa-check fa-bounce fa-xl"></i>
+						<h2 id=mensajeRetiro></h2>
+						<i id="no-error2" class="fa-solid fa-check fa-bounce fa-xl"></i>
+						<i id="error2" class="fa-solid fa-exclamation fa-bounce fa-xl"></i>
 					</dialog>
 				</div>
 			</div>
