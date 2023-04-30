@@ -25,13 +25,13 @@
 					<!-- Tarjeta -->
 					<section class="bienvenida">
 						<div class="column">
-							<h2>¡Hola!</h2>
-							<h3>Bienvenido</h3>
-							<h4 id="nombreusuario">@Usuario</h4>
+							<h2 id="nombreusuario"></h2>
 						</div>
 
 					</section>
+					<div class="cards">
 					<section class="tarjeta" id="tarjeta">
+						
 						<div class="delantera">
 							<div class="row" id="row1">
 								<label>BankApp</label>
@@ -68,15 +68,40 @@
 								<p class="ccv" id="ccv">***</p>
 							</div>
 						</div>
+						</div>
+						<div class="instrucciones">
+							<h5>Haz clic en la tarjeta para visualizar</h5> 
+							<i class="fa-solid fa-hand-pointer fa-bounce"></i>
+						</div>
 					</section>
-					<section class="instrucciones">
-						<h5>Haz clic en la tarjeta para visualizar</h5> 
-						<i class="fa-solid fa-hand-pointer fa-bounce"></i>
-					</section>
+					
 				</div>
 			</div>
 			<div id="Balance"class="bloque">
-				<h2> Saldo actual:</h2>
+				<div class="checkbalance">
+					<div class="title">
+						<i class="fa-solid fa-sack-dollar fa-shake fa-2xl"> </i>
+						<h2>Consultar Saldo</h2>	
+					</div>
+					<div class="block">
+						<div class="accountdetails">
+							<label>Cuenta :</label>
+							<label id="lastfour"> Last four</label>
+						</div>
+						<div class="balance">
+							<label> Balance actual:</label>
+							<label> $<span id="actual-balance">MONTO</span>MXN</label>
+						</div>
+					</div>
+					<div class="history">
+						<i class="fa-solid fa-clock-rotate-left fa-spin fa-spin-reverse fa-xl"></i>
+						<ul> Ultimos movimientos:
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div id="Depositar"class="bloque">
 				<div class="digitinput">

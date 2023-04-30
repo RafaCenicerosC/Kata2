@@ -84,12 +84,13 @@ header label:hover {
 
 .container .li.activo {
   background-color: white;
-  padding: 15px 50px;
+  padding: 25px 25px;
   cursor: pointer;
   color: #027541;
   /* border-radius: 5px; */
   box-shadow: 0 5px 10px rgba(5, 117, 61, 0.3); 
   margin: 0;
+  transform: scale(1.5);
 }
 
 .container .subcontainer {
@@ -130,10 +131,11 @@ header label:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(245, 245, 245, 0.432);
+  background-color: rgba(2, 78, 2, 0.692);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  border-radius: 2em;
 }
 
 .row{
@@ -150,11 +152,12 @@ header label:hover {
   font-size: 36px;
   text-align: right;
   background-color: rgb(232, 246, 248);
-  border-radius: 5px;
+  border-radius: 18px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 30px;
   box-sizing: border-box;
-  border:none
+  border:none;
+  color:darkgreen;
 }
 
 /* Estilos para los botones */
@@ -162,33 +165,34 @@ header label:hover {
   width: 20%;
   height: 2em;
   font-size: 24px;
-  background-color: #e0e0e0;
+  background-color:white;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 18px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   margin-right: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
+  color:darkgreen;
 }
 
 /* Estilos para los botones de borrado */
 .keypad button.delete {
-  background-color: lightgoldenrodyellow;
-  /* color: #fff; */
+  background-color: darkgreen;
+  color:white;
 }
 
 /* Estilos para los botones de reset */
 .keypad button.reset {
-  background-color: #df8b8b;
-  color: #000;
+  background-color: darkgreen;
+  color:white;
 }
 
 .keypad button.actionbutton {
-  background-color: lightgreen;
-  color: #000;
+  background-color: greenyellow;
+  color:darkgreen;
   width: 5em;
   padding: 1em;
   align-items: center;
@@ -199,11 +203,14 @@ header label:hover {
 
 /* Estilos para los botones al pasar el mouse */
 .keypad button.digit:hover {
-  background-color: rgb(213, 245, 213);
+  background-color: darkgreen;
+  color: #fff;
   transform: scale(1.05);
 }
 .keypad button:hover {
   transform: scale(1.05);
+  color:darkgreen;
+  background-color: white;
 }
 
 .digitinput dialog{
@@ -269,23 +276,24 @@ header label:hover {
 	flex-direction: column;
 	align-items: center;
 }
-.bienvenida{
+.bienvenida h2{
   /* background-color: #027541; */
   /* margin: 1em; */
-  color: #fff;
-  font-size: 50px;
+  color: darkgreen;
+  font-size: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0.2em;
+  min-width: 600px;
 }
 
 /*Inicio*/
 .inicio {
   /* background-color: lightskyblue; */
 	width: 100%;
-	/* min-width: 1200px; */
+	/* max-width: 1000px; */
 	padding: 10px 20px;
 	display: flex;
 	align-items: center;
@@ -316,14 +324,14 @@ header label:hover {
 
 
 .inicio .instrucciones{
-  background-color: rgba(213, 216, 209, 0.253);
+  background-color: rgba(245, 245, 245, 0.432);
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
   margin: 2em;
-  padding: 1em;
-  color: #fff;
+  padding: 0.5em;
+  color: darkgreen;
   font-size: 42px;
   border-radius: 32px;
 }
@@ -471,7 +479,105 @@ font-size: 1.5em;
   align-items: center;
 }
 
+.cards{
+  /* background-color: aqua; */
+  width:90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cardscolumn{
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+}
+
+/*Check Balance Option*/
+.checkbalance{
+  /* background-color: white; */
+  padding:1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 40px;
+  height: 68vh;
+}
+.checkbalance .fa-sack-dollar{
+  color:darkgreen;
+  font-size: 150px;
+  margin-bottom: 1em;
+}
+
+.checkbalance .title{
+  color:darkgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #000; */
+  padding: 1em;
+}
+.accountdetails{
+  background-color: rgba(245, 245, 245, 0.432);
+  padding:0.5em ;
+  margin-bottom: 1em;
+  display: flex;
+  border-radius: 18px;
+  min-width:650px;
+  align-items: center;
+  justify-content: flex-end;
+  color:darkgreen;
+  /* box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3); */
+}
+.balance{
+  background-color: rgba(2, 78, 2, 0.692);
+  padding:2em 0;
+  color:white;
+  font-size: 50px;
+  font-weight: 600;
+  min-width:650px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+
+}.history{
+  background-color: darkgreen;
+  padding:1.5em 0;
+  margin-top:1em;
+  min-width:650px;
+  border-radius: 18px;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color:white;
+}
+.history .fa-clock-rotate-left{
+  margin: 0.3em;
+}
+
+.history ul{
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 0.5em;
+  justify-content: center;
+  padding: 1em;
+}
+.history ul li{
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 0.5em;
+  justify-content: flex-start;
+  padding: 0.5em;
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
@@ -535,32 +641,47 @@ font-size: 1.5em;
     font-size: 12px;
   }
 
-.menu{
-  height:50px;
-  font-size: 12px;
-}
+  .subcontainer{
+    margin: 0;
+    padding: 0;
+    min-height: 500px;
+  }
+  .menu{
+    margin-top: 0px;
+    height:60px;
+    font-size: 12px;
+  }
+  
+  .container .li.activo {
+    padding: 10px 5px;
+    transform: scale(1.5);
+  }
 .inicio {
   /* background-color: lightskyblue; */
-	/* padding: 10px; */
+	padding: 0px; 
   flex-direction: row;
   justify-content: space-around;
+
 
 }
 
 .inicio .bienvenida{
-  /* background-color: darkgreen; */
   padding: 0;
-  font-size:40px;
-  
+  width: 7em;
 }
 
+.bienvenida h2 {
+  font-size: 60px;
+  min-width: 6.5em;
+}
 .inicio .instrucciones{
-  background-color: rgba(213, 216, 209, 0.253);
-  /* flex-direction: column; */
-  margin: 0 0;
-  /* padding: 2em 5em; */
-  font-size: 18px;
-  text-align: center;
+  display: none;
+}
+
+div.cards{
+min-width: auto;
+padding: 0;
+margin: 0;
 }
 
 .inicio .instrucciones h5{
@@ -618,7 +739,28 @@ font-size: 1.5em;
 padding: 1.8em 2em;
 font-size: 1em;
 }
+.checkbalance{
+  padding:1em;
+  flex-direction: row;
+  font-size: 16px;
+  height: 68vh;
+  width: 80%;
+}
 
+.accountdetails{
+  min-width:300px;
+}
+.balance{
+  padding:3em 0;
+  font-size: 18px;
+  min-width:0px;
+
+}.history{
+  /* background-color: blue; */
+  padding:2em 0;
+  margin-top:1em;
+  min-width:0px;
+}
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) { 
@@ -630,7 +772,7 @@ font-size: 1em;
     font-size: 18px;
   }
   .bloque.activo {
-    min-height: 78vh;
+    max-height: 60vh;
    }
    .digitinput{
     /* padding: 50px 50px; */
@@ -648,31 +790,42 @@ font-size: 1em;
     height: 4em;
     font-size: 14px;
   }
-
+.subcontainer{
+  margin: 0;
+  padding: 0;
+  min-height: 400px;
+}
 .menu{
-  margin-top: 20px;
-  height:50px;
+  margin-top: 0px;
+  height:60px;
   font-size: 12px;
+}
+
+.container .li.activo {
+  padding: 10px 5px;
+  transform: scale(1.5);
 }
 
 .inicio {
   /* background-color: lightskyblue; */
-	/* padding: 10px; */
+	padding: 0;
   flex-direction: row;
   justify-content: space-around;
-
+  margin: 0;
 }
 
-.inicio .bienvenida{
-  /* background-color: darkgreen; */
-  padding: 0 1em;
-  font-size:40px;
+
+.inicio .bienvenida h2{
+  /* background-color: lightgreen; */
+  font-size:50px;
+  min-width: 6em;
   
 }
 
 .inicio .instrucciones{
   background-color: rgba(213, 216, 209, 0.253);
-  /* flex-direction: column; */
+  flex-direction: column;
+  display: flex;
   margin: 0 2em;
   /* padding: 2em 5em; */
   font-size: 18px;
@@ -733,6 +886,28 @@ font-size: 1.5em;
 .trasera .SecurityCode p {
 padding: 1.8em 2em;
 font-size: 1em;
+}
+.checkbalance{
+  padding:6em;
+  flex-direction: row;
+  font-size: 16px;
+  height: 68vh;
+  width: 80%;
+}
+
+.accountdetails{
+  min-width:300px;
+}
+.balance{
+  padding:3em 0;
+  font-size: 18px;
+  min-width:0px;
+
+}.history{
+  /* background-color: blue; */
+  padding:2em 0;
+  margin-top:1em;
+  min-width:0px;
 }
 
 

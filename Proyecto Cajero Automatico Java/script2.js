@@ -26,7 +26,7 @@ if (usuario == "user1") {
     mmExp: '02',
     yearExp: '25',
     ccv: '275',
-    balance: 1500
+    balance: 100
   }
   console.log(userdata.username +" es: "+userdata.firstName+" "+userdata.lastName);
   changehomeinfo(userdata);
@@ -35,13 +35,13 @@ if (usuario == "user1") {
   console.log("El usuario 3 accedio al sistema");
   const userdata = {
     username: 'user3',
-    firstName: 'David',
-    lastName: 'Castro',
+    firstName: 'Zuly',
+    lastName: 'Ceballos',
     cardNumber: '7456 4567 7856 7564',
     mmExp: '04',
     yearExp: '27',
     ccv: '634',
-    balance: 100
+    balance: 100000
   }
   console.log(userdata.username +" es: "+userdata.firstName+" "+userdata.lastName);
   changehomeinfo(userdata);
@@ -54,13 +54,18 @@ function changehomeinfo(userdata){
     const expmonth = document.getElementById('expmonth');
     const expyear = document.getElementById('expyear');
     const ccv = document.getElementById('ccv');
+    const lastfour = document.getElementById('lastfour');
+    const actualbalance = document.getElementById('actual-balance');
 
-    nombreusuario.innerHTML = userdata.firstName;
+    nombreusuario.innerHTML = "¡Hola "+userdata.firstName+"!";
     numero.innerHTML = userdata.cardNumber;
     nombre.innerHTML = userdata.firstName+" "+userdata.lastName;
     expmonth.innerHTML = userdata.mmExp;
     expyear.innerHTML = userdata.yearExp;
     ccv.innerHTML = userdata.ccv;
+    lastfour.innerHTML = " # "+userdata.cardNumber.substring(userdata.cardNumber.length - 4);
+    actualbalance.innerHTML = userdata.balance;
+
 }
 
 
