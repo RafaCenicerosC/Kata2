@@ -204,3 +204,19 @@ const bloques = document.querySelectorAll('.bloque')
          tarjeta.addEventListener('click', () => {
              tarjeta.classList.toggle('active');
          });
+
+         function changeaccountwindowstatus(){
+          const accountmenu = document.getElementById('account-menu');
+          const accountbutton = document.getElementById('account-btn');
+          const arrowdown = document.getElementById('arrowdown');
+          const arrowup = document.getElementById('arrowup');
+          accountmenu.classList.toggle('active');
+          accountbutton.classList.toggle('active');
+          arrowdown.classList.toggle('active');
+          arrowup.classList.toggle('active');
+         }
+         
+         function logout(){
+          document.cookie = "";
+          window.location.href = "index.html";
+         }
