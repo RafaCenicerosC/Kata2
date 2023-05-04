@@ -160,7 +160,7 @@ function deposit() {
     updatebalance();
     movement= "+ $ "+DepositAmount;
     updatehistory(movement);
-    DepositMessage.innerHTML = 'Deposito Exitoso';
+    DepositMessage.innerHTML = 'Se han depositado $'+DepositAmount +' a su cuenta';
     errorsignal.classList.remove('active');
     checksignal.classList.add('active');
     messagewindow.showModal();
@@ -228,7 +228,7 @@ function withdraw() {
     updatebalance();
     movement= "- $ "+WithdrawAmount;
     updatehistory(movement);
-    WithdrawMessage.innerHTML = 'Retiro Exitoso';
+    WithdrawMessage.innerHTML = 'Se han retirado $'+WithdrawAmount+' de su cuenta';
     errorsignal.classList.remove('active');
     checksignal.classList.add('active');
     messagewindow.showModal();
